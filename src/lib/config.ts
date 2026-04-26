@@ -10,7 +10,7 @@ export const siteConfig = {
   location: "London, UK",
   email: "info@wingsaccountinglimited.com",
   phone: "+44 20 0000 0000",
-  web3FormsAccessKey: "9ef2b139-cf6c-452a-894b-84ff2e3c8c75", // Get yours from https://web3forms.com/
+  web3FormsAccessKey: "169d0c40-ab34-41d3-abc0-caa730c89c8b", // Get yours from https://web3forms.com/
   socials: {
     facebook: "https://www.facebook.com/wingsaccountinglimited/",
     linkedin: "https://www.linkedin.com/company/wingsaccountinglimited/",
