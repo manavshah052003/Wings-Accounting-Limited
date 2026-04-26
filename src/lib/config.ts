@@ -232,3 +232,53 @@ export const contactContent = {
     "Digital Marketing & SEO",
   ],
 };
+
+export const testimonialsContent = {
+  tagline: "Testimonials",
+  title: "What Our Clients Say",
+  description: "Real stories from teams who gained financial control, operational clarity, and growth through our expert outsourcing services.",
+  reviews: [
+    {
+      name: "Alistair Cook",
+      role: "Managing Director, Cook & Associates",
+      content: "Wings Accounting Limited has been a game-changer for our firm. Their VAT return preparation is impeccable, allowing our senior staff to focus entirely on advisory services. We've seen a 30% increase in efficiency since partnering with them.",
+      avatar: "https://i.pravatar.cc/150?u=alistair",
+    },
+    {
+      name: "Sarah Jenkins",
+      role: "Founder, Jenkins & Co Accountants",
+      content: "The accuracy and speed of their bookkeeping team are outstanding. I highly recommend Wings for any UK accounting firm looking to scale without the overhead of local hiring. Their team feels like a direct extension of ours.",
+      avatar: "https://i.pravatar.cc/150?u=sarah",
+    },
+    {
+      name: "David Thompson",
+      role: "Senior Partner, Thompson Financial",
+      content: "Payroll used to be our biggest headache. Now, it's the smoothest part of our operation. Wings Accounting handles everything from auto-enrollment to complex payslips with absolute precision and timeliness.",
+      avatar: "https://i.pravatar.cc/150?u=david",
+    },
+    {
+      name: "Emma Richards",
+      role: "Director, Richards Tax & Audit",
+      content: "Switching to Wings for our Year-End accounts was the best decision we made this year. They are professional, reliable, and their communication is excellent. A truly trusted outsourcing partner.",
+      avatar: "https://i.pravatar.cc/150?u=emma",
+    },
+    {
+      name: "James Wilson",
+      role: "Principal, Wilson Accountancy",
+      content: "The level of integrity and transparency provided by Wings Accounting Limited is rare in the outsourcing industry. They treat our clients' data with the utmost care and always deliver before the deadlines.",
+      avatar: "https://i.pravatar.cc/150?u=james",
+    },
+  ],
+};
+
+export const partnersContent = {
+  title: "TRUSTED BY LEADING FIRMS",
+  logos: [
+    { name: "Global Tax Advisors", id: "partner-1" },
+    { name: "CPA Connect", id: "partner-2" },
+    { name: "Audit Pros", id: "partner-3" },
+    { name: "Finance Flow", id: "partner-4" },
+    { name: "Ledger Masters", id: "partner-5" },
+    { name: "UK Accountants Group", id: "partner-6" },
+  ],
+};

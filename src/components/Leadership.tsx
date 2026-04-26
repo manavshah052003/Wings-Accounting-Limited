@@ -24,7 +24,7 @@ export default function Leadership() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="leadership" ref={ref} className="py-40 lg:py-56 bg-white relative w-full flex flex-col items-center">
+    <section id="leadership" ref={ref} className="py-48 lg:py-64 bg-white relative w-full flex flex-col items-center">
       <div className="w-full max-w-6xl px-6 flex flex-col items-center">
         
         {/* Header */}
@@ -33,15 +33,13 @@ export default function Leadership() {
           variants={fadeUp}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="text-center mb-24 flex flex-col items-center"
+          className="text-center mb-32 flex flex-col items-center gap-8 py-10"
         >
-          <div className="flex justify-center w-full mb-3">
-            <span className="section-tagline">{leadershipContent.tagline}</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-black text-[#1a3a5c] mb-6 text-center max-w-2xl">
+          <span className="section-tagline">{leadershipContent.tagline}</span>
+          <h2 className="text-4xl lg:text-6xl font-black text-[#1a3a5c] text-center max-w-3xl leading-tight">
             {leadershipContent.title}
           </h2>
-          <p className="text-[#64748b] text-lg max-w-2xl text-center leading-relaxed">
+          <p className="text-[#64748b] text-xl max-w-2xl text-center leading-relaxed">
             {leadershipContent.description}
           </p>
         </motion.div>
