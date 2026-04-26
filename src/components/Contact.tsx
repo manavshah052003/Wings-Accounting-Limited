@@ -46,9 +46,41 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState("submitting");
-    // Simulate async submission
-    await new Promise((r) => setTimeout(r, 1800));
-    setFormState("success");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: siteConfig.web3FormsAccessKey,
+          subject: `New Free Trial Request from ${form.name}`,
+          from_name: "Wings Accounting Website",
+          ...form,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setFormState("success");
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          company: "",
+          designation: "",
+          message: "",
+        });
+      } else {
+        setFormState("error");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setFormState("error");
+    }
   };
 
   return (
@@ -280,22 +312,28 @@ export default function Contact() {
                     id="form-submit"
                     type="submit"
                     disabled={formState === "submitting"}
-                    className="btn-primary w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed py-3 mt-4"
+                    className="w-full btn-primary py-4 text-lg group flex items-center justify-center gap-2"
                   >
                     {formState === "submitting" ? (
                       <>
-                        <Loader2 size={16} className="animate-spin" />
-                        Sending…
+                        <Loader2 className="animate-spin" size={20} />
+                        Sending...
                       </>
                     ) : (
                       <>
-                        <Send size={16} />
+                        <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         Get A Free Trial
                       </>
                     )}
                   </button>
 
-                  <p className="text-center text-xs text-[#94a3b8]">
+                  {formState === "error" && (
+                    <p className="text-red-500 text-sm text-center mt-3 font-medium">
+                      Something went wrong. Please try again or contact us directly.
+                    </p>
+                  )}
+
+                  <p className="text-[#94a3b8] text-[10px] uppercase tracking-widest text-center mt-4">
                     No commitment required · We&apos;ll respond within 24 hours
                   </p>
                 </form>
