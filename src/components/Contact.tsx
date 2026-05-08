@@ -136,27 +136,7 @@ export default function Contact() {
               );
             })}
 
-            {/* Social links */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#1a3a5c] to-[#0f2540] text-white">
-              <h3 className="font-black text-lg mb-2">Follow Us</h3>
-              <p className="text-white/60 text-sm mb-5">
-                Stay connected and get the latest updates from our team.
-              </p>
-              <div className="flex gap-3">
-                {Object.entries(siteConfig.socials).map(([key, url]) => (
-                  <a
-                    key={key}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#29b79b] flex items-center justify-center text-white/70 hover:text-white transition-all capitalize text-xs font-bold"
-                    aria-label={key}
-                  >
-                    {key.charAt(0).toUpperCase()}
-                  </a>
-                ))}
-              </div>
-            </div>
+
           </motion.div>
 
           {/* ── Right: form ── */}
