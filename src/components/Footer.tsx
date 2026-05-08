@@ -20,8 +20,8 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 relative">
-                <Image 
-                  src="/logo.png" 
+                <Image
+                  src="/logo.png"
                   alt={siteConfig.name}
                   fill
                   className="object-contain"
@@ -31,13 +31,10 @@ export default function Footer() {
                 <span className="block font-black text-lg leading-tight font-[Outfit]">
                   {siteConfig.name}
                 </span>
-                <span className="block text-[10px] text-[#29b79b] font-semibold tracking-widest uppercase">
-                  Expert Outsourcing
-                </span>
               </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
-              ACCA Affiliated firm providing expert outsourcing solutions to UK accountancy firms. 20+ years of experience.
+              ACCA Affiliated firm providing expert outsourcing solutions to UK accountancy firms.
             </p>
             <div className="flex flex-col gap-3 text-sm">
               <a
