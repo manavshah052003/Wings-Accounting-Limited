@@ -29,15 +29,15 @@ export default function Testimonials() {
     <section
       id="testimonials"
       ref={ref}
-      className="py-48 lg:py-64 bg-[#f8fafc] overflow-hidden flex flex-col items-center"
+      className="py-20 lg:py-28 bg-[#f8fafc] overflow-hidden flex flex-col items-center"
     >
-      <div className="w-full max-w-7xl px-6 flex flex-col items-center mb-24">
+      <div className="w-full max-w-7xl px-6 flex flex-col items-center mb-16">
         {/* Header */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="w-full text-center flex flex-col items-center gap-8"
+          className="w-full text-center flex flex-col items-center gap-4"
         >
           <span className="section-tagline">{testimonialsContent.tagline}</span>
           <h2 className="text-4xl lg:text-6xl font-black text-[#1a3a5c] leading-tight text-center max-w-3xl">

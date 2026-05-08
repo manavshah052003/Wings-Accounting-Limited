@@ -87,35 +87,8 @@ export default function Hero() {
           <br />
           with Trusted
           <br />
-          <span className="relative inline-block">
-            Outsourcing Partner
-            <svg
-              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-[105%]"
-              viewBox="0 0 300 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M2 9C50 3 100 1 150 3 200 5 250 3 298 9"
-                stroke="#29b79b"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
+          Outsourcing Partner
         </motion.h1>
-
-        {/* Subheadline */}
-        <motion.p
-          custom={2}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="text-[#475569] text-lg leading-relaxed mb-8 max-w-2xl mx-auto"
-        >
-          {heroContent.subheadline}
-        </motion.p>
 
         {/* Key benefits bullets */}
         <motion.ul

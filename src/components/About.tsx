@@ -2,15 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  Target, Sprout, Handshake, CheckCircle,
-  Users, Eye, CheckCircle2, Award,
-} from "lucide-react";
+import { CheckCircle2, Award } from "lucide-react";
 import { aboutContent } from "@/lib/config";
-
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  Target, Sprout, Handshake, CheckCircle, Users, Eye,
-};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -73,57 +66,6 @@ export default function About() {
             </div>
           ))}
         </motion.div>
-
-        {/* Divider */}
-        <div className="border-t border-[#e2e8f0] mb-12" />
-
-        {/* Core Values heading */}
-        <motion.div
-          custom={2}
-          variants={fadeUp}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="w-full flex flex-col items-center text-center mb-10"
-        >
-          <span className="section-tagline mb-3">Our DNA</span>
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1a3a5c]">Core values</h3>
-        </motion.div>
-
-        {/* Core Values grid — Parallax Flipping Cards */}
-        <div className="flip-card-wrapper mb-12">
-          <div className="flip-card-cols">
-            {aboutContent.coreValues.map((val, i) => {
-              const Icon = iconMap[val.icon] || CheckCircle;
-              return (
-                <motion.div
-                  key={val.title}
-                  custom={i + 3}
-                  variants={fadeUp}
-                  initial="hidden"
-                  animate={inView ? "visible" : "hidden"}
-                  className="flip-card-col"
-                >
-                  <div className="flip-card-container">
-                    <div className="flip-card-front">
-                      <div className="flip-card-inner">
-                        <div className="w-12 h-12 rounded-xl bg-[#29b79b]/10 flex items-center justify-center mx-auto mb-4">
-                          <Icon size={24} className="text-[#29b79b]" />
-                        </div>
-                        <p>{val.title}</p>
-                        <span className="text-[10px] uppercase tracking-widest font-bold opacity-50">Our DNA</span>
-                      </div>
-                    </div>
-                    <div className="flip-card-back">
-                      <div className="flip-card-inner">
-                        <p className="mb-0">{val.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
 
       </div>
     </section>
