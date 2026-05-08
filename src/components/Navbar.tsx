@@ -43,8 +43,8 @@ export default function Navbar() {
         initial={{ y: 0 }}
         animate={{ y: 0 }}
         className={`sticky top-0 z-50 transition-all duration-300 flex justify-center ${scrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
-            : "bg-white"
+          ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
+          : "bg-white"
           }`}
       >
         <div className="w-full max-w-6xl px-6 h-20 flex items-center justify-between">
@@ -55,8 +55,8 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
           >
             <div className="w-12 h-12 relative transition-transform group-hover:scale-105">
-              <Image 
-                src="/logo.png" 
+              <Image
+                src="/logo.png"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
@@ -66,9 +66,7 @@ export default function Navbar() {
               <span className="block font-black text-[#1a3a5c] text-lg leading-tight font-[Outfit]">
                 {siteConfig.name}
               </span>
-              <span className="block text-[10px] text-[#29b79b] font-semibold tracking-widest uppercase">
-                Expert Outsourcing
-              </span>
+
             </div>
           </a>
 
@@ -83,8 +81,8 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                   className={`relative px-4 py-2 rounded-xl text-[0.95rem] font-bold tracking-tight transition-all duration-300 ${isActive
-                      ? "text-[#29b79b] bg-[#29b79b]/5"
-                      : "text-[#1a3a5c]/80 hover:text-[#29b79b] hover:bg-[#29b79b]/5"
+                    ? "text-[#29b79b] bg-[#29b79b]/5"
+                    : "text-[#1a3a5c]/80 hover:text-[#29b79b] hover:bg-[#29b79b]/5"
                     }`}
                 >
                   {link.label}
@@ -131,8 +129,8 @@ export default function Navbar() {
                       href={link.href}
                       onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                       className={`px-4 py-3 rounded-xl text-[0.9rem] font-semibold transition-all ${isActive
-                          ? "text-[#29b79b] bg-[#29b79b]/10"
-                          : "text-[#1e293b] hover:text-[#29b79b] hover:bg-[#f8fafc]"
+                        ? "text-[#29b79b] bg-[#29b79b]/10"
+                        : "text-[#1e293b] hover:text-[#29b79b] hover:bg-[#f8fafc]"
                         }`}
                     >
                       {link.label}
